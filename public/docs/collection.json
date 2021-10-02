@@ -1,0 +1,65 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Shipment Microservice",
+        "_postman_id": "529c90c2-b816-4708-bc13-7c11311e0a9d",
+        "description": "This API to calculate the time when a shipment left Earth in UTC datetime and arrival to Lunar Colony.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Shipment Microservice",
+            "description": "",
+            "item": [
+                {
+                    "name": "api/v1/lunar_time",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api/v1/lunar_time",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{'utc_date': '2021-10-10 10:21:33'}"
+                        },
+                        "description": "",
+                        "response": [
+                            {
+                                "status_code": 200,
+                                "status": "success",
+                                "lunar_datetime": "54-11-01 ∇ 13:22:44 LST. The day name is CERNAN"
+                            },
+                            {
+                                "utc_date": [
+                                    "UTC datetime is required"
+                                ]
+                            },
+                            {
+                                "utc_date": [
+                                    "Valid UTC (y-m-d h:m:s) date required. Example (2021-01-05 12:10:34)"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

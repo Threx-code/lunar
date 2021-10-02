@@ -1,0 +1,16 @@
+# add the version of the docker-compose file
+version: '3.8'
+# add the services
+services:
+    # add the lunar app service
+    lunar:
+        # connect the docker-conpose file with the Dockerfile
+        # specifiy the build
+        build:
+            # specifiy the context
+            context: .
+            # specify the Dockerfile name
+            dockerfile: Dockerfile
+            # specify the port
+        ports:
+            - 8000:8000
